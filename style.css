@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg1: #F2F4E8;
+    --bg2: #FDFDFD;
+    --main: #00A859;
+    --bgCount: linear-gradient(309deg, #F0E7DA 0%, #F9F4EE 97.54%);
+    --dbg: #A8AD87;
+
+}
+
+/* gerneral */
+body {
+    font-family: Cairo;
+    font-size: 20px;
+
+}
+
+.container {
+    max-width: 1200px;
+    padding: 48px 0;
+    margin: auto;
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    width: 185px;
+    height: 56px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: var(--main);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* header */
+header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.counter {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hero */
+.hero {
+    background-color: var(--bg1);
+}
+
+.heroImg,
+.heroContent {
+    display: flex;
+    align-items: end;
+    width: 50%;
+    height: auto;
+}
+
+.heroContent {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 32px;
+}
+
+.heroContent h1 {
+    font-size: 56px;
+    font-weight: 900;
+    margin: 0;
+    text-align: end;
+
+}
+
+.heroContent p {
+    text-align: end;
+}
+/* statistics */
+.num .container{
+    gap: 24px;
+}
+.stat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: var(--bgCount);
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 12px;
+}
+.value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dbg);
+    width: 88px;
+    height: 88px;
+    color: white;
+    border-radius: 50%;
+
+}
+/* details */
+.details{
+    background-color: var(--bg1);
+}
+.details .container img{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
