@@ -154,26 +154,158 @@ $(function () {
   $(".timer").startTimer();
 });
 
-// animated text
-const counters = document.querySelectorAll("buy");
-
-counters.forEach((counter) => {
-  counter.innerText = "960";
-  const updateCounter = () => {
-    const target = +1200;
-    const count = +counter.innerText;
-    const increment = target / 200;
-    if (count < target) {
-      counter.innerText = `${Math.ceil(count + increment)}`;
-      setTimeout(updateCounter, 1);
-    } else counter.innerText = target;
-  };
-  updateCounter();
-});
-
 // tooltip
 
 const tooltip = document.querySelector(".tooltip");
-tooltip.addEventListener("click", ()=>{
-    tooltip.setAttribute("style", "display: none;");
+tooltip.addEventListener("click", () => {
+  tooltip.setAttribute("style", "display: none;");
 });
+
+// reviews
+
+const reviews = [
+  {
+    name: "نجود الحارثي",
+    comment: "المنتج مو طبيعي 😍 الله يعطيكم العافية.",
+    rate: 4,
+  },
+  {
+    name: "خلود",
+    comment:
+      "بنتي كان شعرها شوي خشن ومعذبني في التمشيط ووالله الحين أفضل بكلم كل صحباتي عنه👏.",
+    rate: 4,
+  },
+  {
+    name: "سديم تركي",
+    comment: "منتج جيد الصراحة و حاسة بأختلاف بس مشكلته يخلص بسرعة.",
+    rate: 4,
+  },
+  {
+    name: "سارة الشمري",
+    comment:
+      "شعري يعاني من تلف بسبب الصبغات والحرارة و اول مرة ألقى منتج يرجع لي حيويته بذي السرعة ، برافو🙌🏻.",
+    rate: 4,
+  },
+  {
+    name: "سلمى الأنصاري",
+    comment: "عيبكم شيء واحد تردون متأخر 🙂",
+    rate: 4,
+  },
+  {
+    name: "عبدالله العويس",
+    comment: "منتج جبار👍🏻",
+    rate: 4,
+  },
+  {
+    name: "ياسمين عزت",
+    comment: "حبيتو كتير بدي اعرف الخلطة😅",
+    rate: 4,
+  },
+  {
+    name: "خالد النويصر",
+    comment: "يااخي ابلشتونا كل شوي المنتج ماهو متوفر؟",
+    rate: 4,
+  },
+  {
+    name: "عبير هوساوي",
+    comment:
+      "واااو ماتوقعته يكون كدا الصراحة😍النتيجة مرة سريعة حتى الكيرلي صار يلمع ✨ صدق شكراً 🙌🏽",
+    rate: 5,
+  },
+  {
+    name: "فدوة",
+    comment: "👏🏻👏🏻👏🏻10/10",
+    rate: 5,
+  },
+  {
+    name: "الجوهرة العبدلي",
+    comment: "ماعندكم عروض لليوم الوطني نبي نشتري حق سنة😂",
+    rate: 3,
+  },
+  {
+    name: "منيرة القحطاني",
+    comment:
+      "صحباتي يسألوني يقولون في شيء متغير في شعرك صاير يلمع 🫢 ماقلت لهم عنكم أسفة 😅.",
+    rate: 4,
+  },
+  {
+    name: "خالد الدوسري",
+    comment: "ليه الطلبية قلتم بتوصلك خلال ثلاث ايام ووصلتني بعد أسبوع؟",
+    rate: 3,
+  },
+  {
+    name: "عهود",
+    comment:
+      "شريت علبة منكم على أساس بستخدمها لحالي، من الاسبوع الثاني كل البيت شاركني و الحين قضت😭",
+    rate: 3,
+  },
+  {
+    name: "فيصل",
+    comment: "👍🏻",
+    rate: 4,
+  },
+  {
+    name: "لطيفة مسعود",
+    comment: "ممتاز 👌",
+    rate: 4,
+  },
+  {
+    name: "مها ياسر",
+    comment: "عجييييب! مفعوله سريع صدق وش تحطون فيه؟🌚",
+    rate: 5,
+  },
+  {
+    name: "ندى",
+    comment:
+      "يا جماعة، جربت زيت العشبة السوداء والصراحة ما صدقت النتيجة! شعري صار أنعم و ألمع لكن يمكن أنه يحتاج رائحة أفضل",
+    rate: 4,
+  },
+  {
+    name: "ريم صالح",
+    comment:
+      "بصراحة، يساعد في إصلاح الأضرار. شعري كان تالف وتحسن بشكل واضح بعد ماستخدمته ولكن السعر شوي غالي🤷🏻‍♀️",
+    rate: 3,
+  },
+];
+
+let currentReviewIndex = 0;
+
+const reviewCard = document.querySelector(".review-card");
+const dotContainer = document.querySelector(".dot-container");
+//geterate dots
+for(let i = 0; i<= reviews.length; i++){
+    dotContainer.innerHTML += `<span class="dot"></span>`;
+};
+const dots = Array.from(dotContainer.querySelectorAll(".dot"));
+//create comment
+function showReview(index) {
+  reviewCard.style.display = "block";
+  reviewCard.innerHTML = `
+                <h3>${reviews[index].name}</h3>
+                <p>${reviews[index].comment}</p>
+                <p>⭐${reviews[index].rate.toFixed(1)}</p>
+            `;
+}
+
+//update dots
+function updateDots(index) {
+  dots.forEach((dot, i) => {
+    dot.className = i === index ? "dot active" : "dot";
+  });
+}
+// actions
+function nextReview() {
+  currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+  showReview(currentReviewIndex);
+  updateDots(currentReviewIndex);
+}
+
+function prevReview() {
+  currentReviewIndex =
+    (currentReviewIndex - 1 + reviews.length) % reviews.length;
+  showReview(currentReviewIndex);
+  updateDots(currentReviewIndex);
+}
+
+showReview(currentReviewIndex);
+updateDots(currentReviewIndex);
