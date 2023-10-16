@@ -1,108 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Herb</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- To be placed in the head tag -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gardevoir" />
-    <link rel="shortcut icon" href="assets/fav.jpg" type="image/x-icon">
-</head>
+    <link rel="shortcut icon" href="assets/fav.jpg" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- counter -------------------->
-        <div class="counter">الوقت المتبقى على السعر الحالى: <span class="timer" data-minutes-left="1400"></span></div>
-        <!-- logo -------------------->
-        <img class="logo" src="assets/logo.png" alt="logo">
+      <!-- counter -------------------->
+      <div class="counter">
+        الوقت المتبقى على السعر الحالى:
+        <span class="timer" data-minutes-left="1400"></span>
+      </div>
+      <!-- logo -------------------->
+      <img class="logo" src="assets/logo.png" alt="logo" />
     </header>
     <main>
-            <a href="https://api.whatsapp.com/send?phone=966558523900">
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Whatsapp-512.png"
-                    alt="whatsapp"
-                    class="whatsapp">
-            </a>
-        <!-- hero -------------------->
-        <section class="hero">
-            <div class="container">
-                <img src="assets/hero.png" alt="" class="heroImg">
-                <div class="heroContent">
-                    <h1>زيت العشبة السوداء</h1>
-                    <p>اكتشفى سِر زيت العشبة السوداء الفريد الذي يحمل في طياته العناية العميقة والسحر القديم، لشعر ينبض
-                        بالحيوية
-                        والجمال، سر أجدادنا.</p>
-                    <a href="https://blackherb.shop/zvAAZvl" class="btn">احصل علية مقابل 50ر فقط</a>
-                </div>
-            </div>
-        </section>
-        <!-- statistics -------------------->
-        <section class="num">
-            <div class="container">
-                <div class="stat">
-                    <div class="value">1200</div>
-                    <span class="label">مرات الشراء</span>
-                </div>
-                <div class="stat">
-                    <div class="value">100%</div>
-                    <span class="label">مواد طبيعية</span>
-                </div>
-                <div class="stat">
-                    <div class="value">964</div>
-                    <span class="label">عملاء راضيين</span>
-                </div>
-            </div>
-        </section>
-        <!-- details -------------------->
-        <section class="img">
-            <div class="container">
-                <img src="assets/details.png" alt="details">
-            </div>
-        </section>
-        <!-- فوائد -------------------->
-        <section class="benfits">
-            <div class="container">
-                <img src="assets/product.png" alt="" class="bImg">
-                <div class="bContent">
-                    <h2>فوائد زيت العشبة السوداء</h2>
-                    <p>
-                        <br>يساعد على حماية الشعر من التساقط
-                        <br>زيت طبيعى مصرح من
-                        <br>مكثف ومغذى للشعر
-                        <br>يحافظ على نعومة ولمعان الشعر
-                        <br>يناسب جميع الفئات العمرية من الرجال والنساء
-                    </p>
-                    <a href="https://blackherb.shop/zvAAZvl" class="btn">احصل علية مقابل 50ر فقط</a>
-                </div>
-            </div>
-        </section>
-        <!-- video -------------------->
-        <section>
-            <div class="container">
-                <iframe class="video" title="user review" src="https://www.youtube.com/embed/ehfZpFZgKQg" title="bb"
-                    frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-        <!-- reviews -------------------->
-        <!-- <section>
+      <!-- whatsapp -------------------->
+      <div class="wsContainer">
+        <div class="tooltip">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+          تواصل معنا
+        </div>
+        <a
+          href="https://api.whatsapp.com/send?phone=966558523900"
+          class="whatsapp"
+        >
+          <img
+            src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Whatsapp-512.png"
+            alt="whatsapp"
+          />
+        </a>
+      </div>
+      <!-- hero -------------------->
+      <section class="hero">
+        <div class="container">
+          <img src="assets/hero.png" alt="" class="heroImg" />
+          <div class="heroContent">
+            <h1>زيت العشبة السوداء</h1>
+            <p>
+              اكتشفى سِر زيت العشبة السوداء الفريد الذي يحمل في طياته العناية
+              العميقة والسحر القديم، لشعر ينبض بالحيوية والجمال، سر أجدادنا.
+            </p>
+            <a href="https://blackherb.shop/zvAAZvl" class="btn"
+              >احصل علية مقابل 50ر فقط</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- statistics -------------------->
+      <section class="num">
+        <div class="container">
+          <div class="stat">
+            <div class="value">1200</div>
+            <span class="label">مرات الشراء</span>
+          </div>
+          <div class="stat">
+            <div class="value">100%</div>
+            <span class="label">مواد طبيعية</span>
+          </div>
+          <div class="stat">
+            <div class="value">964</div>
+            <span class="label">عملاء راضيين</span>
+          </div>
+        </div>
+      </section>
+      <!-- details -------------------->
+      <section class="img">
+        <div class="container">
+          <img src="assets/details.png" alt="details" />
+        </div>
+      </section>
+      <!-- فوائد -------------------->
+      <section class="benfits">
+        <div class="container">
+          <img src="assets/product.png" alt="" class="bImg" />
+          <div class="bContent">
+            <h2>فوائد زيت العشبة السوداء</h2>
+            <p>
+              <br />يساعد على حماية الشعر من التساقط <br />زيت طبيعى مصرح من
+              <br />مكثف ومغذى للشعر <br />يحافظ على نعومة ولمعان الشعر
+              <br />يناسب جميع الفئات العمرية من الرجال والنساء
+            </p>
+            <a href="https://blackherb.shop/zvAAZvl" class="btn"
+              >احصل علية مقابل 50ر فقط</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- video -------------------->
+      <section>
+        <div class="container">
+          <iframe
+            class="video"
+            title="user review"
+            src="https://www.youtube.com/embed/ehfZpFZgKQg"
+            title="bb"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <!-- reviews -------------------->
+      <!-- <section>
             <div class="container">
                 <img src="" alt="">
             </div>
         </section> -->
-        <!-- ضمان -------------------->
-        <section class="img">
-            <div class="container">
-                <img src="assets/cert.png" alt="certificate">
-            </div>
-        </section>
-
+      <!-- ضمان -------------------->
+      <section class="img">
+        <div class="container">
+          <img src="assets/cert.png" alt="certificate" />
+        </div>
+      </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

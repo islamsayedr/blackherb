@@ -1,255 +1,274 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --bg1: #F2F4E8;
-    --bg2: #FDFDFD;
-    --main: #00A859;
-    --bgCount: linear-gradient(309deg, #F0E7DA 0%, #F9F4EE 97.54%);
-    --dbg: #A8AD87;
-
+  --bg1: #F2F4E8;
+  --bg2: #FDFDFD;
+  --main: #00A859;
+  --bgCount: linear-gradient(309deg, #F0E7DA 0%, #F9F4EE 97.54%);
+  --dbg: #A8AD87;
 }
-/* whatsapp */
-.whatsapp { position: fixed; right: 24px; bottom: 24px; height: 56px; width: 56px;}
-/* gerneral */
-body {
-    font-family: Cairo;
-    font-size: 20px;
-    line-height: 32px;
 
+/* whatsapp */
+.wsContainer {
+  position: fixed;
+  display: flex;
+  gap: 8px;
+  right: 24px;
+  bottom: 24px;
+}
+.tooltip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;
+  padding: 0 16px;
+  border-radius: 50px;
+  background-color: #333;
+  line-height: 50px;
+  color: #FFF;
+  text-align: center;
+}
+.wsContainer .whatsapp img {
+  height: 56px;
+  width: 56px;
+}
+
+/* general */
+body {
+  font-family: Cairo;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .container {
-    max-width: 1200px;
-    padding: 48px 0;
-    margin: auto;
-    display: flex;
+  max-width: 1200px;
+  padding: 48px 0;
+  margin: auto;
+  display: flex;
 }
 
 .btn {
-    display: flex;
-    width: 300px;
-    height: 56px;
-    padding: 12px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 12px;
-    background: var(--main);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+  display: flex;
+  width: 300px;
+  height: 56px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  background: var(--main);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .video {
-    width: 100%;
-    height: 600px;
-    border-radius: 16px;
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
 }
 
 /* header */
 header {
-    display: flex;
-    height: 100px;
-    align-items: center;
-    padding: 8px 64px;
-    position: fixed;
-    width: 100vw;
-    background-color: white;
-    top: 0;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  padding: 8px 64px;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  top: 0;
 }
 
-.logo {
-    height: 100%;
-    width: auto;
+header .logo {
+  height: 100%;
+  width: auto;
 }
 
-.counter {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
+header .counter {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 }
 
-.timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    font-size: 32px;
-    font-weight: 700;
+header .timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 /* hero */
 .hero {
-    background-color: var(--bg1);
+  background-color: var(--bg1);
 }
+
 .hero .container {
-    margin-top: 100px;
-}
-.heroImg,
-.heroContent {
-    display: flex;
-    align-items: end;
-    width: 50%;
-    height: auto;
+  margin-top: 100px;
 }
 
-.heroContent {
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 32px;
+.hero .heroImg,
+.hero .heroContent {
+  display: flex;
+  align-items: end;
+  width: 50%;
+  height: auto;
 }
 
-.heroContent h1 {
-    font-size: 56px;
-    line-height: 88px;
-    font-weight: 900;
-    margin: 0 0 16px 0;
-    text-align: end;
-
+.hero .heroContent {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
 }
 
-.heroContent p {
-    text-align: end;
-    margin: 0 0 24px 0;
+.hero .heroContent h1 {
+  font-size: 56px;
+  line-height: 88px;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  text-align: end;
+}
+
+.hero .heroContent p {
+  text-align: end;
+  margin: 0 0 24px 0;
 }
 
 /* statistics */
 .num .container {
-    gap: 24px;
+  gap: 24px;
 }
 
-.stat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    background: var(--bgCount);
-    flex-grow: 1;
-    flex-direction: column;
-    padding: 24px;
-    border-radius: 12px;
+.num .stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background: var(--bgCount);
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 12px;
 }
 
-.value {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--dbg);
-    width: 88px;
-    height: 88px;
-    color: white;
-    border-radius: 50%;
-
+.num .stat .value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dbg);
+  width: 88px;
+  height: 88px;
+  color: white;
+  border-radius: 50%;
 }
 
 /* details */
 .img {
-    background-color: var(--bg1);
+  background-color: var(--bg1);
 }
 
 .img .container img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
 }
 
 /* فوائد */
 .bImg,
 .bContent {
-    display: flex;
-    align-items: end;
-    width: 50%;
-    height: auto;
-    border-radius: 16px;
+  display: flex;
+  align-items: end;
+  width: 50%;
+  height: auto;
+  border-radius: 16px;
 }
+
 .bContent {
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 32px;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
 }
+
 .bContent p {
-    display: flex;
-    flex-direction: column;
-    text-align: end;
-    margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin: 0 0 24px 0;
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        font-family: Cairo;
-        font-size: 16px;
-        line-height: 24px;
+  body {
+    font-family: Cairo;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    }
+  .container {
+    padding: 32px 24px;
+  }
 
-    .container {
-        padding: 32px 24px;
-    }
+  .heroContent h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
 
-    .heroContent h1 {
-        font-size: 48px;
-        line-height: 64px;
-    }
+  /* header */
+  header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 4px;
+  }
 
-    /* header */
-    header {
-        display: flex;
-        height: 80px;
-        align-items: center;
-        padding: 8px 24px;
-        gap: 4px;
-    }
+  header .counter {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 
-    .counter {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-    }
+  /* hero */
+  .hero .container {
+    margin-top: 80px;
+    flex-direction: column;
+    gap: 24px;
+  }
 
-    /* hero */
-    .hero .container {
-        margin-top: 80px;
-    }
-    .hero .container {
-        flex-direction: column;
-        gap: 24px;
-    }
+  .hero .heroImg,
+  .hero .heroContent {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
 
-    .heroImg,
-    .heroContent {
-        width: 100%;
-        padding: 0;
-        align-items: center;
-    }
+  .hero .heroContent h1,
+  .hero .heroContent p {
+    text-align: center;
+  }
 
-    .heroContent h1,
-    .heroContent p {
-        text-align: center;
+  /* statistics */
+  .num .container {
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    }
+  /* فوائد */
+  .benfits .container {
+    flex-direction: column;
+    gap: 24px;
+  }
 
+  .benfits .bImg,
+  .benfits .bContent {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+  }
 
-    /* statistics */
-    .num .container {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    /* فوائد */
-    .benfits .container {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .bImg,
-    .bContent {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        align-items: center;
-    }
-    .bContent p {
-        text-align: center;
-    }
-}
+  .benfits .bContent p {
+    text-align: center;
+ 
